@@ -7,5 +7,5 @@ import (
 )
 
 func main() {
-	http.ListenAndServe("localhost:8080", goproxy.New())
+	http.ListenAndServe("0.0.0.0:8080", goproxy.New())
 }
