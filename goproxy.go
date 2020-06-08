@@ -12,6 +12,7 @@ func main() {
 	g.GoBinEnv = append(
 		os.Environ(),
 		"GOPROXY=https://goproxy.cn,direct",
+		"GO111MODULE=on",
 	)
 	g.ProxiedSUMDBs = []string{"sum.golang.org https://sum.golang.google.cn"}
 	http.ListenAndServe("0.0.0.0:8080", g)
