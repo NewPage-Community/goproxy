@@ -1,0 +1,10 @@
+stages:
+  - build
+  - build-image
+  - deploy
+
+include:
+  - project: newpage/newpage-build-tool
+    file: /gitlab-ci/Go.gitlab-ci.yml
+  - project: newpage/newpage-build-tool
+    file: /gitlab-ci/Docker.gitlab-ci.yml
