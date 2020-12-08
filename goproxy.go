@@ -12,7 +12,7 @@ func main() {
 	g := goproxy.New()
 	g.GoBinEnv = append(
 		os.Environ(),
-		"GOPROXY=https://goproxy.cn,direct", // 使用 goproxy.cn 作为上游代理
+		"GOPROXY=https://goproxy.cn", // 使用 goproxy.cn 作为上游代理
 	)
 	g.ProxiedSUMDBs = []string{"sum.golang.org https://goproxy.cn/sumdb/sum.golang.org"} // 代理默认的校验和数据库
 	g.Cacher = &cacher.Disk{
